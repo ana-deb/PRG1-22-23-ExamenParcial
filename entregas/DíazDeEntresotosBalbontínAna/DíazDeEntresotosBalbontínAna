@@ -1,0 +1,94 @@
+public class examenParcial{
+	public static void main(String[] args){
+		
+		Scanner entrada = new Scanner(System.in);
+
+		String entradaDelUsuario;
+
+		int probabilidadAgujero1;
+		int probabilidadAgujero2;
+		int probabilidadAgujero3;
+		int probabilidadAgujero4;
+		int posicionCamello1 = 0;
+		int turnosEmpleados = 0;
+        int numCasillas = 60;
+        int cantidadDeFallos = 0;
+        int pierdeTurno;
+        int posicionCamello2 = 0;
+        int avanceCamello2;
+
+        //CAMELLO DEL USUARIO
+
+		//Bucle WHile para que mientras los turnos no lleguen a 60 o mas los condicionales sigan funcionando.
+		while (turnosEmpleados = 50 - numCasillas <=60){
+
+            turnosEmpleados = turnosEmpleados + 1;
+
+			System.out.println ("Elije a que agujero quieres lanzar, Agujero1, Agujero2, Agujero3 o Agujero 4");
+
+            if (cantidadDeFallos = 3){
+                posicionCamello1 = posicionCamello1 + 0;
+                pierdeTurno = 2;
+                System.out.println("El jugador ha fallado tres veces al encestar por lo que pierde dos turnos");
+
+            }if (entradaDelUsuario = 1){
+
+				if (probabilidadAgujero1 < 0.6){
+					posicionCamello = posicionCamello1 + 1;
+				}else{
+                    cantidadDeFallos = cantidadDeFallos +1;
+					posicionCamello = posicionCamello1 + 0 ;
+				}
+
+			} if (entradaDelUsuario = 2){
+				if (probabilidadAgujero2 < 0.4){
+					posicionCamello = posicionCamello1 + 2;
+				}else{
+					posicionCamello = posicionCamello1 + 0;
+				}
+
+			}if (entradaDelUsuario = 3){
+				if(probabilidadAgujero3 < 0.3){
+					posicionCamello = posicionCamello1 + 4;
+				}else{
+					posicionCamello = posicionCamello1 + 0;
+				}
+
+			}else{
+				if (probabilidadAgujero4 < 0.1){
+					posicionCamello = posicionCamello1 + 6;
+				}else{
+					posicionCamello = posicionCamello1 + 0;
+				}
+		    } 
+        
+        }
+        //CAMELLO ORDENADOR
+
+        while (turnosEmpleados = 50 - numCasillas <=60){
+
+            if(avanceCamello2 = 1){
+                posicionCamello2 = posicionCamello2 + 1;
+            }if (avanceCamello2 = 2){
+                posicionCamello2 = posicionCamello2 + 2;
+            }else{
+                posicionCamello2 = posicionCamello2 + 3;
+            }
+
+
+            }
+	
+		//Esquematizacion del codigo
+        final String BORDE_SUPERIOR =     "---+-----------+---------+---------+---------+---------+-----------+";
+        final String PRIMERA_FILA =       "---| 0.........1.........2.........3.........4.........5.........6 |";
+        final String SEGUNDA_FILA =       "---| 0123456789012345678901234567890123456789012345678901234567890 |";
+        final String TERCERA_FILA =       "---+-----------+---------+---------+---------+---------+-----------+";
+        final String CAMELLO_USUARIO  =   "[J]| ;--;'                                                          ";
+        final Strinf CAMELLO_ORDENADOR =  "[O]| ;--;'                                                          ";
+        final String BORDE_INFERIOR =     "---+-----------+---------+---------+---------+---------+-----------+";
+
+        System.out.println("Turno: ["+ turnosEmpleados +"] - El camello1 esta en la casilla ["+ posicionCamello1 +"]");
+        System.out.println("EL camello2 esta en la casilla ["+ posicionCamello2 +"]");
+        System.out.println (" Elija una casilla");
+	}
+}
